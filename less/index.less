@@ -19,10 +19,11 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
+	border: 2px solid red;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -50,11 +51,61 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	
 }
 
 html, body {
 	height: 100%;
-	background-color: red;
+	
 }
 
+.container{
+	max-width: 100%;
+	width: 800px;
+	margin: 0 auto;
+	
+}
+
+header{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	max-width: 100%;
+	align-items:center;
+	padding: 2%;
+
+	.image{
+		max-width: 50%;
+	}
+
+	.name{
+		display:flex;
+		flex-direction: column;
+		justify-content:flex-end;
+		align-items: flex-end;
+		text-align: right;
+	}
+
+	img{
+		max-width: 100%;
+	}
+}
+
+section{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+	padding: 2%;
+
+	.cat{
+		width: 50%;
+		padding: 2%;
+	}
+}
+
+h2{
+	color: blue;
+}

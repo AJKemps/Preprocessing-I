@@ -85,7 +85,7 @@ audio,
 video {
   margin: 0;
   padding: 0;
-  border: 0;
+  border: 2px solid red;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
@@ -133,5 +133,45 @@ table {
 html,
 body {
   height: 100%;
-  background-color: red;
+}
+.container {
+  max-width: 100%;
+  width: 800px;
+  margin: 0 auto;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 100%;
+  align-items: center;
+  padding: 2%;
+}
+header .image {
+  max-width: 50%;
+}
+header .name {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+}
+header img {
+  max-width: 100%;
+}
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2%;
+}
+section .cat {
+  width: 50%;
+  padding: 2%;
+}
+h2 {
+  color: blue;
 }
