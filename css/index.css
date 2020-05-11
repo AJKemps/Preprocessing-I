@@ -172,6 +172,11 @@ section .cat {
   width: 50%;
   padding: 2%;
 }
-h2 {
+section .cat #skillscontact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+section h2 {
   color: blue;
 }
