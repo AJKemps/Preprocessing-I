@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 2px solid red;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 	
@@ -57,6 +57,25 @@ table {
 
 
 
+@font: 'Playfair Display', serif;
+@font-color: #2E4057;
+@header-color: #034748;
+@background-color: #EBEBD3;
+@main-header-color: #001021;
+@sub-header-color: #477998;
+
+.paragraph-font{
+	font-family: @font;
+	font-size: 0.9rem;
+	color: @font-color;
+}
+
+.header-font{
+	padding: 1% 0%;
+	line-height: 175%;
+	font-type: @font;
+}
+
 html, body {
 	height: 100%;
 	
@@ -64,9 +83,18 @@ html, body {
 
 .container{
 	max-width: 100%;
-	width: 800px;
+	width: 1200px;
 	margin: 0 auto;
-	
+	background-color: @background-color;
+}
+
+nav{
+	display: flex;
+	justify-content: flex-end;
+	a{
+		padding: 2% 2%;
+		text-decoration: none;
+	}
 }
 
 header{
@@ -92,6 +120,24 @@ header{
 	img{
 		max-width: 100%;
 	}
+	h1{
+		font-family: @font;
+		color: @header-color;
+		font-size: 3.5rem;
+		padding: 2% 0%;
+	}
+	h2{
+		font-family: @font;
+		color: @sub-header-color;
+		font-size: 1.5rem;
+		padding: 4%;
+		line-height: 175%;
+	}
+	@media(max-width: 500px){
+		display: flex;
+		flex-direction: column-reverse;
+
+	}
 }
 
 section{
@@ -102,16 +148,43 @@ section{
 	width: 100%;
 	padding: 2%;
 
+	h3{
+		font-size: 1.6rem;
+		color: @main-header-color;
+		.header-font();
+	}
+
+	h4{
+		font-size: 1.1rem;
+		color: @font-color;
+		
+	}
+
 	.cat{
 		width: 50%;
 		padding: 2%;
+
+		@media(max-width: 500px){
+			width: 75%;
+		}
+
+		p{
+			.paragraph-font();
+			}
 
 		#skillscontact{
 			display: flex;
 			flex-direction: column;
 			justify-content: space-around;
+			}
 		}
+		@media(max-width: 500px){
+			display:flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 		}
+
 
 h2{
 	color: blue;
