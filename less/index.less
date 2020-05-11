@@ -94,6 +94,13 @@ nav{
 	a{
 		padding: 2% 2%;
 		text-decoration: none;
+		color: @sub-header-color;
+	}
+	font-family: @font;
+	
+
+	@media(max-width: 500px){
+		justify-content: space-evenly;
 	}
 }
 
@@ -183,6 +190,10 @@ section{
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+			#aboutme{order: 1;}
+			#education{order: 2;}
+			#skillscontact{order: 4;}
+			#experience{order: 3;}
 		}
 
 
