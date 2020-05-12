@@ -85,7 +85,7 @@ audio,
 video {
   margin: 0;
   padding: 0;
-  border: 2px solid red;
+  border: 0;
   font-size: 62.5%;
   font: inherit;
   vertical-align: baseline;
@@ -134,11 +134,20 @@ table {
   font-family: 'Playfair Display', serif;
   font-size: 0.9rem;
   color: #2E4057;
+  line-height: 175%;
 }
 .header-font {
   padding: 1% 0%;
   line-height: 175%;
   font-type: 'Playfair Display', serif;
+}
+@media (max-width: 500px) {
+  .mobilecenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 html,
 body {
@@ -146,17 +155,20 @@ body {
 }
 .container {
   max-width: 100%;
-  width: 1200px;
+  width: 1000px;
   margin: 0 auto;
-  background-color: #EBEBD3;
+  padding: 0% 5%;
+  background-color: white;
 }
 nav {
   display: flex;
   justify-content: flex-end;
   font-family: 'Playfair Display', serif;
+  background-color: #EBEBD3;
+  font-size: 1.4rem;
 }
 nav a {
-  padding: 2% 2%;
+  padding: 4% 2%;
   text-decoration: none;
   color: #477998;
 }
@@ -176,12 +188,24 @@ header {
 header .image {
   max-width: 50%;
 }
+@media (max-width: 500px) {
+  header .image {
+    max-width: 75%;
+  }
+}
 header .name {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
   text-align: right;
+}
+@media (max-width: 500px) {
+  header .name {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 header img {
   max-width: 100%;
@@ -212,6 +236,7 @@ section {
   justify-content: space-between;
   width: 100%;
   padding: 2%;
+  background-color: #EBEBD3;
 }
 section h3 {
   font-size: 1.6rem;
@@ -223,6 +248,7 @@ section h3 {
 section h4 {
   font-size: 1.1rem;
   color: #2E4057;
+  margin-top: 5%;
 }
 section .cat {
   width: 50%;
@@ -231,17 +257,49 @@ section .cat {
 @media (max-width: 500px) {
   section .cat {
     width: 75%;
+    margin: 5% 0%;
   }
 }
 section .cat p {
   font-family: 'Playfair Display', serif;
   font-size: 0.9rem;
   color: #2E4057;
+  line-height: 175%;
 }
-section .cat #skillscontact {
+section .cat #skills {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin: 25% 0%;
+}
+section .cat #skills h4 {
+  margin-top: 5%;
+}
+@media (max-width: 500px) {
+  section .cat #skills {
+    margin: 5% 0%;
+  }
+}
+section .cat #contact {
+  text-align: left;
+}
+@media (max-width: 500px) {
+  section .cat #contact {
+    text-align: center;
+    margin: 25% 0%;
+  }
+}
+section .cat #contact a {
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9rem;
+  color: #2E4057;
+  line-height: 175%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 500px) {
   section {
@@ -262,7 +320,4 @@ section .cat #skillscontact {
   section #experience {
     order: 3;
   }
-}
-section h2 {
-  color: blue;
 }

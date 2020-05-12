@@ -19,7 +19,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 2px solid red;
+	border: 0;
 	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
@@ -68,12 +68,23 @@ table {
 	font-family: @font;
 	font-size: 0.9rem;
 	color: @font-color;
+	line-height: 175%;
 }
 
 .header-font{
 	padding: 1% 0%;
 	line-height: 175%;
 	font-type: @font;
+}
+
+.mobilecenter{
+	@media(max-width:500px){
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
 }
 
 html, body {
@@ -83,20 +94,23 @@ html, body {
 
 .container{
 	max-width: 100%;
-	width: 1200px;
+	width: 1000px;
 	margin: 0 auto;
-	background-color: @background-color;
+	padding: 0% 5%;
+	background-color: white;
 }
 
 nav{
 	display: flex;
 	justify-content: flex-end;
 	a{
-		padding: 2% 2%;
+		padding: 4% 2%;
 		text-decoration: none;
 		color: @sub-header-color;
 	}
 	font-family: @font;
+	background-color: @background-color;
+	font-size: 1.4rem;
 	
 
 	@media(max-width: 500px){
@@ -111,9 +125,13 @@ header{
 	max-width: 100%;
 	align-items:center;
 	padding: 2%;
+	
 
 	.image{
 		max-width: 50%;
+		@media(max-width: 500px){
+			max-width: 75%;
+		}
 	}
 
 	.name{
@@ -122,6 +140,11 @@ header{
 		justify-content:flex-end;
 		align-items: flex-end;
 		text-align: right;
+		@media(max-width: 500px){
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		}
 	}
 
 	img{
@@ -154,6 +177,9 @@ section{
 	justify-content: space-between;
 	width: 100%;
 	padding: 2%;
+	background-color: @background-color;
+
+	
 
 	h3{
 		font-size: 1.6rem;
@@ -164,6 +190,7 @@ section{
 	h4{
 		font-size: 1.1rem;
 		color: @font-color;
+		margin-top: 5%;
 		
 	}
 
@@ -173,17 +200,49 @@ section{
 
 		@media(max-width: 500px){
 			width: 75%;
+			margin: 5% 0%;
 		}
 
 		p{
 			.paragraph-font();
 			}
 
-		#skillscontact{
+		#skills{
 			display: flex;
 			flex-direction: column;
 			justify-content: space-around;
+			margin: 25% 0%;
+
+			h4{
+				margin-top: 5%;
 			}
+
+			@media(max-width: 500px){
+				margin: 5% 0%;
+			}
+
+			}
+		#contact{
+			text-align: left;
+				@media(max-width: 500px){
+					text-align: center;
+					margin: 25% 0%;
+				}
+
+			a{
+			font-family:@font;
+			text-decoration: none;
+			.paragraph-font();
+			line-height: 175%;
+			text-align: left;
+
+			@media(max-width: 500px){}
+			display: flex;
+			flex-direction: column;	
+			justify-content: center;
+				align-items: center;
+		}
+	}
 		}
 		@media(max-width: 500px){
 			display:flex;
@@ -197,7 +256,5 @@ section{
 		}
 
 
-h2{
-	color: blue;
-}
+
 }
