@@ -4,9 +4,13 @@
 <head>
   <meta charset="utf-8">
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>My Resume</title>
 
   <link rel="stylesheet" href="css/index.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -14,6 +18,85 @@
 </head>
 
 <body>
-  <h1>My Resume</h1>
+  <div class="container">
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact</a>
+      </nav>
+    <header>
+      <div class="image">
+        <img src="circle-cropped.png" alt="picture of me">
+      </div>
+
+      <div class="name">
+        <h1>Alex Kemper</h1>
+        <h2>Full Stack Web Developer <br> and Sales Professional</h2>
+      </div>
+    </header>
+
+    <section>
+      <div class="cat" id="aboutme">
+        <h3>About Me</h3>
+        <p>I am currently a full stack web development student at Lambda School. Prior to starting Lambda School, I was an early employee in sales and business development at Guideline, a fintech startup that makes 401(k) plans accessible to small businesses via API integration with payroll providers like Square, Gusto, Rippling, and Intuit.</p>
+      </div>
+
+      <div class="cat" id="education">
+        <h3>Education</h3>
+        <h4>Lambda School</h4>
+        <p>2020 | Full Stack Web Development</p>
+        <br>
+        <h4>The Ohio State University Fisher College of Business</h4>
+        <p>2013 | B.S. Economics</p>
+
+      </div>
+
+      <div class="cat" id="skillscontact">
+        <div id="skills">
+          <h3>Skills</h3>
+          <h4> Web Development</h4>
+          <p>HTML, CSS, Javascript, Node, React, Python, Redux, SQL, Git</p>
+          <h4> Business Development</h4>
+          <p>Quota-carrying sales attainment, partner management, product development, people management </p>
+        </div>
+
+        <div id="contact">
+          <h3>Contact</h3>
+          <a href="alex.j.kemper@gmail.com">alex.j.kemper@gmail.com</a><br>
+          <a href="https://github.com/ajkemps">Github</a><br>
+          <a href="https://www.linkedin.com/in/alexjkemper/">LinkedIn</a>
+          
+        </div>
+      </div>
+
+      <div class="cat" id="experience">
+        <h3>Experience</h3>
+          <div class="exp">
+            <div class="expcontent">
+              <h4>Guideline, Inc</h4>
+              <p>Channel Sales Manager, Sr. Account Executive</p>
+              <p>2016-2020</p><br>
+              <p>First sales hire, was promoted three times as company grew from nothing to $15MM in ARR and 200 employees.</p><br>
+              <p>Routinely brought in on BD and partnership meetings because of his ability to clearly communicate the company's value to executive stakeholders at potential partner companies.</p><br>
+              <p>Became the go-to for presenting product demos and articulating value proposition to high-value prospects.</p><br>
+            </div>
+          </div>
+
+          <div class="exp">
+            <div class="expcontent">
+              <h4>ArcelorMittal USA, Inc</h4>
+              <p>Account Manager</p>
+              <p>2014-2016</p><br>
+              <p>Managed customer accounts with an annual value in excess of $50MM</p><br>
+              <p>Developed new business, negotiated deals with executive-level decision makers, consistently exceeded sales goals, and coordinated customer service.</p><br>
+            </div>
+          </div>
+      </div>
+
+    </section>
+
+
+  </div>
 </body>
 </html>

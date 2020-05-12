@@ -1,1 +1,323 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 62.5%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+.paragraph-font {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9rem;
+  color: #2E4057;
+  line-height: 175%;
+}
+.header-font {
+  padding: 1% 0%;
+  line-height: 175%;
+  font-type: 'Playfair Display', serif;
+}
+@media (max-width: 500px) {
+  .mobilecenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+html,
+body {
+  height: 100%;
+}
+.container {
+  max-width: 100%;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0% 5%;
+  background-color: white;
+}
+nav {
+  display: flex;
+  justify-content: flex-end;
+  font-family: 'Playfair Display', serif;
+  background-color: #EBEBD3;
+  font-size: 1.4rem;
+}
+nav a {
+  padding: 4% 2%;
+  text-decoration: none;
+  color: #477998;
+}
+@media (max-width: 500px) {
+  nav {
+    justify-content: space-evenly;
+  }
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 100%;
+  align-items: center;
+  padding: 2%;
+}
+header .image {
+  max-width: 50%;
+}
+@media (max-width: 500px) {
+  header .image {
+    max-width: 75%;
+  }
+}
+header .name {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+}
+@media (max-width: 500px) {
+  header .name {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+header img {
+  max-width: 100%;
+}
+header h1 {
+  font-family: 'Playfair Display', serif;
+  color: #034748;
+  font-size: 3.5rem;
+  padding: 2% 0%;
+}
+header h2 {
+  font-family: 'Playfair Display', serif;
+  color: #477998;
+  font-size: 1.5rem;
+  padding: 4%;
+  line-height: 175%;
+}
+@media (max-width: 500px) {
+  header {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2%;
+  background-color: #EBEBD3;
+}
+section h3 {
+  font-size: 1.6rem;
+  color: #001021;
+  padding: 1% 0%;
+  line-height: 175%;
+  font-type: 'Playfair Display', serif;
+}
+section h4 {
+  font-size: 1.1rem;
+  color: #2E4057;
+  margin-top: 5%;
+}
+section .cat {
+  width: 50%;
+  padding: 2%;
+}
+@media (max-width: 500px) {
+  section .cat {
+    width: 75%;
+    margin: 5% 0%;
+  }
+}
+section .cat p {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9rem;
+  color: #2E4057;
+  line-height: 175%;
+}
+section .cat #skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 25% 0%;
+}
+section .cat #skills h4 {
+  margin-top: 5%;
+}
+@media (max-width: 500px) {
+  section .cat #skills {
+    margin: 5% 0%;
+  }
+}
+section .cat #contact {
+  text-align: left;
+}
+@media (max-width: 500px) {
+  section .cat #contact {
+    text-align: center;
+    margin: 25% 0%;
+  }
+}
+section .cat #contact a {
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9rem;
+  color: #2E4057;
+  line-height: 175%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  section #aboutme {
+    order: 1;
+  }
+  section #education {
+    order: 2;
+  }
+  section #skillscontact {
+    order: 4;
+  }
+  section #experience {
+    order: 3;
+  }
+}
